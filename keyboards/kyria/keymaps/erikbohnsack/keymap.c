@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
      [_SVORAK] = LAYOUT(
        KC_GRV, XP(0,1), XP(2,3), XP(4,5), KC_P, KC_Y,                             KC_F, KC_G, KC_C, KC_R, KC_L, KC_BSLS,
-       LCTL_T(KC_CAPS), KC_A, KC_O, KC_E, KC_U, KC_I,                                     KC_D, KC_H, KC_T, KC_N, KC_S, KC_MINS,
+       LCTL_T(KC_CAPS), LGUI_T(KC_A), LALT_T(KC_O), LSFT_T(KC_E), LCTL_T(KC_U), KC_I,                                     KC_D, RCTL_T(KC_H), RSFT_T(KC_T), LALT_T(KC_N), RGUI_T(KC_S), KC_MINS,
        KC_LSFT, KC_SCLN, KC_Q, KC_J, KC_K, KC_X, KC_MPLY, KC_VOLU, KC_MNXT, KC_MUTE,  KC_B, KC_M,  KC_W, KC_V, KC_Z, KC_LSFT,
        KC_LGUI, KC_DEL, KC_LALT, LT(_LOWER, KC_SPC), LSFT_T(KC_ESC), LT(_LOWER, KC_BSPC), LT(_RAISE, KC_ENT), LT(_NUM, KC_TAB), _______, KC_PSCR
      ),
