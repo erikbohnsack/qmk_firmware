@@ -52,19 +52,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,-------------------------------------------.                              ,-------------------------------------------.
    * |   ` ~  |   Å  |   Ä  |   Ö  |   P  |   Y  |                              |   F  |   G  |   C  |   R  |   L  |    \   |
    * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
-   * |   Ctrl |   A  |   O  |  E   |   U  |   I  |                              |   D  |   H  |   T  |   N  |   S  |   -    |
+   * |   Caps |   A  |   O  |  E   |   U  |   I  |                              |   D  |   H  |   T  |   N  |   S  |   -    |
    * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
-   * | LShift |   ;  |   Q  |   J  |   K  |   X  | Play | VolUp|  | Next | Mute |   B  |   M  |   W  |   V  |  Z   | LShift |
+   * |        |   ;  |   Q  |   J  |   K  |   X  | Play | VolUp|  | Next | Mute |   B  |   M  |   W  |   V  |  Z   |        |
    * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
-   *                        | GUI  | Del  | Alt  | Space| Esc  |  | Bksp | Enter| Tab  |      | PrtSc|
-   *                        |      |      |      | Lower|LShift|  | Lower| Raise| Num  |      |      |
-   *                        `----------------------------------'u  `----------------------------------'
+   *                        |      |      |      | Space| Esc  |  | Bksp | Enter| Tab  |      | PrtSc|
+   *                        |      |      |      | Lower|      |  | Lower| Raise| Num  |      |      |
+   *                        `----------------------------------'  `----------------------------------'
    */
      [_SVORAK] = LAYOUT(
        KC_GRV, XP(0,1), XP(2,3), XP(4,5), KC_P, KC_Y,                             KC_F, KC_G, KC_C, KC_R, KC_L, KC_BSLS,
-       LCTL_T(KC_CAPS), LGUI_T(KC_A), LALT_T(KC_O), LSFT_T(KC_E), LCTL_T(KC_U), KC_I,                                     KC_D, RCTL_T(KC_H), RSFT_T(KC_T), LALT_T(KC_N), RGUI_T(KC_S), KC_MINS,
-       KC_LSFT, KC_SCLN, KC_Q, KC_J, KC_K, KC_X, KC_MPLY, KC_VOLU, KC_MNXT, KC_MUTE,  KC_B, KC_M,  KC_W, KC_V, KC_Z, KC_LSFT,
-       KC_LGUI, KC_DEL, KC_LALT, LT(_LOWER, KC_SPC), LSFT_T(KC_ESC), LT(_LOWER, KC_BSPC), LT(_RAISE, KC_ENT), LT(_NUM, KC_TAB), _______, KC_PSCR
+       KC_CAPS, LGUI_T(KC_A), LALT_T(KC_O), LSFT_T(KC_E), LCTL_T(KC_U), KC_I,     KC_D, RCTL_T(KC_H), RSFT_T(KC_T), LALT_T(KC_N), RGUI_T(KC_S), KC_MINS,
+       _______, KC_SCLN, KC_Q, KC_J, KC_K, KC_X, KC_MPLY, KC_VOLU, KC_MNXT, KC_MUTE,  KC_B, KC_M,  KC_W, KC_V, KC_Z, _______,
+       _______, _______, _______, LT(_LOWER, KC_SPC), KC_ESC, LT(_LOWER, KC_BSPC), LT(_RAISE, KC_ENT), LT(_NUM, KC_TAB), _______, KC_PSCR
      ),
 /*
  * Raise Layer: Symbols
@@ -96,7 +96,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
  * |        |      |      | Down |  Up  |      |      |      |  |      |      |      | MLeft| MDown| MUp  |MRight|        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
- *                        |      |      |      |      |      |  |      |MClick|      |      |      |
+ *                        |      |      |      |      |      |  | Del  |MClick|      |      |      |
  *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
@@ -104,7 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, _______, _______, _______, _______, _______,                                     _______,  _______, KC_PGUP, KC_PGDN, KC_RGHT, _______,
       _______, _______, _______, _______, _______, _______,                                     _______, KC_LEFT, KC_HOME,   KC_END, _______, _______,
       _______, _______, _______,  KC_DOWN,   KC_UP, _______, _______, _______, _______, _______, _______, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______,
-                                 _______, _______, _______, _______, _______, _______, KC_BTN1, _______, _______, _______
+                                 _______, _______, _______, _______, _______, KC_DEL, KC_BTN1, _______, _______, _______
     ),
 /*
  * Num Layer: Numbers
